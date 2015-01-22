@@ -13,8 +13,9 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        widget.cpp \
-    hexspinbox.cpp
+    hexspinbox.cpp \
+    iconeditor.cpp
 
-HEADERS  += widget.h \
-    hexspinbox.h
+HEADERS  += \
+    hexspinbox.h \
+    iconeditor.h
