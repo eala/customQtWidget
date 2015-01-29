@@ -4,18 +4,32 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += designer widgets
 
 TARGET = customQtWidget
-TEMPLATE = app
+TEMPLATE = lib
 
+CONFIG += plugin release
 
-SOURCES += main.cpp\
-    hexspinbox.cpp \
-    iconeditor.cpp
+SOURCES +=\
+    #hexspinbox.cpp \
+    iconeditor.cpp \
+    iconeditorplugin.cpp \
+    #form.cpp
 
 HEADERS  += \
-    hexspinbox.h \
-    iconeditor.h
+    #hexspinbox.h \
+    iconeditor.h \
+    iconeditorplugin.h \
+    #form.h
+
+#FORMS += \
+    #form.ui
+
+OTHER_FILES += iconeditor.json
+
+target.path = $$[QT_INSTALL_PLUGINS]/designer
+INSTALLS += target
+
+DISTFILES += \
+    iconeditor.json
