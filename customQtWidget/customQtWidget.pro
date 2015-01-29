@@ -12,24 +12,14 @@ TEMPLATE = lib
 CONFIG += plugin release
 
 SOURCES +=\
-    #hexspinbox.cpp \
-    iconeditor.cpp \
-    iconeditorplugin.cpp \
-    #form.cpp
+    iconeditor.cpp\
+    iconeditorplugin.cpp
 
-HEADERS  += \
-    #hexspinbox.h \
-    iconeditor.h \
-    iconeditorplugin.h \
-    #form.h
-
-#FORMS += \
-    #form.ui
+HEADERS +=\
+    iconeditor.h\
+    iconeditorplugin.h
 
 OTHER_FILES += iconeditor.json
 
-target.path = $$[QT_INSTALL_PLUGINS]/designer
-INSTALLS += target
-
-DISTFILES += \
+DISTFILES +=\
     iconeditor.json
